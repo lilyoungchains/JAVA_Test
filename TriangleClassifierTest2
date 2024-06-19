@@ -1,0 +1,109 @@
+package test;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TriangleClassifierTest2 {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void classifyTriangle1() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(1,100,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle2() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(2,100,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+
+    @Test
+    public void classifyTriangle3() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(199,100,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle4() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(200,100,100);
+        Assert.assertEquals("不能构成三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle5() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,1,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle6() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,2,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle7() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,199,100);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle8() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,200,100);
+        Assert.assertEquals("不能构成三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle9() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,100,1);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle10() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,100,2);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle11() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,100,199);
+        Assert.assertEquals("等腰三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle12() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,100,200);
+        Assert.assertEquals("不能构成三角形",result);
+    }
+
+    @Test
+    public void classifyTriangle13() {
+        TriangleClassifier apple = new TriangleClassifier();
+        String result =apple.classifyTriangle(100,100,100);
+        Assert.assertEquals("等边三角形",result);
+    }
+}
